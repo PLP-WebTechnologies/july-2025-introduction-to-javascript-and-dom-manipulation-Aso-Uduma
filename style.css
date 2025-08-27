@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+button {
+    padding: 8px 14px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input {
+    padding: 6px;
+    margin-right: 8px;
+}
+
+/* Button click shrink effect */
+button:active {
+    transform: scale(0.95);
+    background-color: #1d6fa5;
+    transition: transform 0.05s ease, background-color 0.2s ease;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); }
+    70%  { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+button.clicked {
+    animation: pulse 0.4s;
+}
